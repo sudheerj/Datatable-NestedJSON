@@ -1,0 +1,30 @@
+<p-dataTable [value]="browsers" [rows]="10" [paginator]="true">
+    <p-headerColumnGroup>
+        <p-row>
+            <p-column header="Browser" rowspan="3"></p-column>
+            <p-column header="Details" colspan="4"></p-column>
+        </p-row>
+        <p-row>
+            <p-column header="Environment" colspan="2"></p-column>
+            <p-column header="FeedBack" colspan="2"></p-column>
+        </p-row>
+        <p-row>
+            <p-column header="Engine" field="environment.engine" [filter]="true" filterPlaceholder="Type engine"></p-column>
+            <p-column header="Platform" field="environment.platform" [filter]="true" filterPlaceholder="Type platform"></p-column>
+            <p-column header="Rating" field="environment.rating" [filter]="true" filterPlaceholder="Type rating"></p-column>
+            <p-column header="Grade" field="feedback.grade" [filter]="true" filterPlaceholder="Type grade"></p-column>
+        </p-row>
+    </p-headerColumnGroup>
+
+    <p-column field="environment.browser" ></p-column>
+    <p-column field="environment.engine" ></p-column>
+    <p-column field="environment.platform"></p-column>
+    <p-column field="feedback.rating" ></p-column>
+    <p-column field="feedback.grade"></p-column>
+
+    <p-footerColumnGroup>
+        <p-row>
+            <p-column footer="*Please note that Chrome browser details not included" colspan="5"></p-column>
+        </p-row>
+    </p-footerColumnGroup>
+</p-dataTable>
